@@ -2,7 +2,7 @@
  * This repository serves to showcase all my visualizations and maps created using the rayshader package in R or python
 
 ## About Rayshader
-Rayshader is an R package that enables the creation of stunning 2D and 3D visualizations of spatial data, particularly geographic data, using a combination of elevation data and customizable shaders. You can explore the documentation (HERE)[https://www.rayshader.com/]
+Rayshader is an R package that enables the creation of stunning 2D and 3D visualizations of spatial data, particularly geographic data, using a combination of elevation data and customizable shaders. You can explore the documentation [HERE](https://www.rayshader.com/)
 
 Projects
 This repository contains a collection of projects demonstrating the capabilities of rayshader. Each project folder typically includes:
