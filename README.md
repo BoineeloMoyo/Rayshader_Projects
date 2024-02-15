@@ -15,5 +15,4 @@ Rayshader is an R package that enables the creation of stunning 2D and 3D visual
 
 
 License
-The code and content in this repository are licensed under the MIT License, unless otherwise specified
-# This repo shall harbour all of my rayshader related projects
+The code and content in this repository are licensed under the MIT License, unless otherwise specified. 
