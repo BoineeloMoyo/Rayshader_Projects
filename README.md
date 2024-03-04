@@ -11,7 +11,8 @@ Rayshader is an R package that enables the creation of stunning 2D and 3D visual
 ![ls](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/lower_saxony/niedersachsen-forest-height-2020.png)
 - Data: [ETH Global Forest Height](https://gee-community-catalog.org/projects/canopy/)
 
-- Tutorial: [Milo's Tutorial]()
+- Tutorial: [Milo's Tutorial](https://www.youtube.com/watch?v=4ScYWPMzy6E&t=565s)
+  
 ## 02. 2022 Land Cover of Lesotho
 
 ### Each project folder typically includes: 
