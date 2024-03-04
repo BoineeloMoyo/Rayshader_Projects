@@ -15,6 +15,9 @@ Rayshader is an R package that enables the creation of stunning 2D and 3D visual
   
 ## 02. 2022 Land Cover of Lesotho
 
+- Data: [ESRI Land Cover](https://livingatlas.arcgis.com/landcover/)
+- Tutorial: [Milo's Tutorial](https://www.youtube.com/watch?v=y_Kzg24Ciuo&t=366s)
+
 ### Each project folder typically includes: 
 
 * R scripts or notebooks showcasing the code used to generate the visualization or map.
