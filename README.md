@@ -17,6 +17,8 @@ Rayshader is an R package that enables the creation of stunning 2D and 3D visual
 * R scripts or notebooks showcasing the code used to generate the visualization or map.
 * Input data sources (if applicable). 
 * Output images or interactive visualizations.
+
+* 
 * 
 License
 The code and content in this repository are licensed under the [MIT License](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/LICENSE), unless otherwise specified. 
