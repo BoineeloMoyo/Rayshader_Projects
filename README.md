@@ -12,7 +12,7 @@ Rayshader is an R package that enables the creation of stunning 2D and 3D visual
 - Data: [ETH Global Forest Height](https://gee-community-catalog.org/projects/canopy/)
   
 ## 02. 2022 Land Cover of Lesotho
-![lulc](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/Lesotho_LULC/lesotho_lulc.jpg)
+![lulc](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/PROJECTS/Lesotho_LULC/lesotho_lulc.jpg)
 
 - Data: [ESRI Land Cover](https://livingatlas.arcgis.com/landcover/)
 
