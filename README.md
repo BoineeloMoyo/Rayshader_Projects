@@ -1,5 +1,5 @@
  # Rayshader Projects Repo 
-This repository serves to showcase all my visualizations and maps created using the rayshader package in R or python. I was inspired by [Milos Popovic](https://github.com/milos-agathon) who has extensively applied the package in geospatial analysis. 
+This repository serves to showcase all my visualizations and maps created using the rayshader package in R or python. 
 
  ### Each project folder typically includes: 
 * R scripts or notebooks showcasing the code used to generate the visualization or map.
