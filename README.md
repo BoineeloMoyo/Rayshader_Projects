@@ -18,7 +18,7 @@ Rayshader is an R package that enables the creation of stunning 2D and 3D visual
 - Data: [ESRI Land Cover](https://livingatlas.arcgis.com/landcover/)
 
 ## 03. Luxemboug Average Temperature and Rainfall from 1981 to 2010
-![lulc](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/PROJECTS/Lesotho_LULC/lesotho_lulc.jpg)
+![lulc](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/PROJECTS/luxembourg_3D_rainfall/luxembourg-bivariate-3d.png)
 
 - Data: [ESRI Land Cover](https://livingatlas.arcgis.com/landcover/)
 
