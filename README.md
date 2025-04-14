@@ -8,16 +8,20 @@ This repository serves to showcase all my visualizations and maps created using 
 ## About Rayshader
 Rayshader is an R package that enables the creation of stunning 2D and 3D visualizations of spatial data, using a combination of elevation data and customizable shaders. You can explore the documentation [HERE](https://www.rayshader.com/)
   
-## 01. Niedersachsen Forest Height Map 2020
+## 01. Botswana §D Temperature and Rainfall Patterns (1981 - 2010)
+![Botswana_3D](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/PROJECTS/botswana-bivariate-3d.png)
+- Data: [CHELSA](https://chelsa-climate.org/)
+
+## 02. Niedersachsen Forest Height Map 2020
 ![ls](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/PROJECTS/lower_saxony/niedersachsen-forest-height-2020.png)
 - Data: [ETH Global Forest Height](https://gee-community-catalog.org/projects/canopy/)
   
-## 02. 2022 Land Cover of Lesotho
+## 03. 2022 Land Cover of Lesotho
 ![lulc](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/PROJECTS/Lesotho_LULC/lesotho_lulc.jpg)
 
 - Data: [ESRI Land Cover](https://livingatlas.arcgis.com/landcover/)
 
-## 03. Luxemboug Average Temperature and Rainfall from 1981 to 2010
+## 04. Luxemboug Average Temperature and Rainfall from 1981 to 2010
 ![lux](https://github.com/BoineeloMoyo/Rayshader_Projects/blob/main/PROJECTS/luxembourg_3D_rainfall/luxembourg-bivariate-3d.png)
 
 - Data: [CHELSA](https://chelsa-climate.org/)
