@@ -52,3 +52,11 @@ temp_prec <- c(temp, prec_average)
 # assign names to each layer in the stack
 names(temp_prec) <- c("temperature", "precipitation")
 
+# 3. COUNTRY POLYGON
+#-------------------
+
+country_sf <- geodata::gadm(
+  country = "BWA", level = 0,
+  path = main_dir
+) |>
+  sf::st_as_sf()
