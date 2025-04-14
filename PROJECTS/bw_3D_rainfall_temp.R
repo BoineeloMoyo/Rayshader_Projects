@@ -51,3 +51,4 @@ temp_prec <- c(temp, prec_average)
 
 # assign names to each layer in the stack
 names(temp_prec) <- c("temperature", "precipitation")
+
