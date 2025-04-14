@@ -245,3 +245,17 @@ download.file(
   destfile = hdri_file,
   mode = "wb"
 )
+# 10. RENDER 3D OBJECT
+#---------------------
+
+rayshader::render_highquality(
+  filename = "botswana-bivariate-3d.png",
+  preview = TRUE,
+  light = FALSE,
+  environment_light = hdri_file,
+  intensity = 1,
+  rotate_env = 90,
+  parallel = TRUE,
+  width = 2000, height = 2000,
+  interactive = FALSE
+)
