@@ -97,3 +97,41 @@ terra::plot(temp_prec_resampled)
 temp_prec_df <- as.data.frame(
   temp_prec_resampled, xy = TRUE
 )
+
+# 5. BREAKS, PALETTE AND PLOT THEME
+#----------------------------------
+
+# create bivariate classes using biscale
+breaks <- biscale::bi_class(
+  temp_prec_df, x = temperature,
+  y = precipitation, style = "fisher",
+  dim = 3
+)
+
+# Define the color palette
+pal <- "GrPink2"
+
+# define a custom theme for the map
+theme_for_the_win <- function(){
+  theme_minimal() +
+    theme(
+      axis.title = element_blank(),
+      plot.background = element_rect(
+        fill = "white", color = NA
+      ),
+      plot.title = element_text(
+        color = "grey10", hjust = .5,
+        face = "bold", vjust = -1
+      ),
+      plot.subtitle = element_text(
+        hjust = .5, vjust = -1
+      ),
+      plot.caption = element_text(
+        size = 9, color = "grey20",
+        hjust = .5, vjust = 1
+      ),
+      plot.margin = unit(c(0, 0, 0, 0), "lines"
+      )
+    )
+}
+
