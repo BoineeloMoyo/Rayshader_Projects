@@ -60,3 +60,40 @@ country_sf <- geodata::gadm(
   path = main_dir
 ) |>
   sf::st_as_sf()
+
+# 4. CROP AND RESAMPLE
+#---------------------
+
+# define the target CRS
+target_crs <- "EPSG:4209"
+
+# crop the input raster to the
+# country's extent and apply a mask
+temp_prec_country <- terra::crop(
+  temp_prec, country_sf,
+  mask = TRUE
+)
+
+# Obtain AWS tiles DEM data from elevatr
+# convert to terra SpatRaster and crop
+dem <- elevatr::get_elev_raster(
+  locations = country_sf, z = 8,
+  clip = "locations"
+) |> terra::rast() |>
+  terra::crop(country_sf, mask = TRUE)
+
+# resample the raster to match DEM resolution
+# using bilinear interpolation, then reproject
+
+temp_prec_resampled <- terra::resample(
+  x = temp_prec_country,
+  y = dem, method = "bilinear"
+) |> terra::project(target_crs)
+
+# plot the resampled raster
+terra::plot(temp_prec_resampled)
+
+# convert the raster to dataframe with coordinates
+temp_prec_df <- as.data.frame(
+  temp_prec_resampled, xy = TRUE
+)
