@@ -234,3 +234,14 @@ rayshader::plot_gg(
 
 # zoom out
 rayshader::render_camera(zoom = .6)
+# 9. LIGHTS
+#----------
+
+url <- "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/brown_photostudio_02_4k.hdr"
+hdri_file <- basename(url)
+
+download.file(
+  url = url,
+  destfile = hdri_file,
+  mode = "wb"
+)
