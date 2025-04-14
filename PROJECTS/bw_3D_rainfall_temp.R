@@ -135,3 +135,58 @@ theme_for_the_win <- function(){
     )
 }
 
+# 6. 2D BIVARIATE MAP
+#--------------------
+
+# create the bivariate map using ggplot2
+map <- ggplot(breaks) +
+  geom_raster(
+    aes(
+      x = x, y = y, fill = bi_class
+    ), show.legend = TRUE # FALSE
+  ) +
+  biscale::bi_scale_fill(
+    pal = pal, dim = 3,
+    flip_axes = TRUE, rotate_pal = FALSE
+  ) +
+  labs(
+    title = "Botswana: Temperature and Precipitation",
+    subtitle = "Average temperature and precipitation (1981-2010)",
+    caption = "Source: CHELSA | Author: @Boineelo",
+    x = "", y = ""
+  ) +
+  coord_sf(crs = target_crs) +
+  theme_for_the_win()
+
+# create the legend for the bivariate map
+legend <- biscale::bi_legend(
+  pal = pal,
+  flip_axes = TRUE,
+  rotate_pal = FALSE,
+  dim = 3,
+  xlab = "Temperature (°C)",
+  ylab = "Precipitation (mm)",
+  size = 8
+)
+
+# combine the map and legend using cowplot
+full_map <- cowplot::ggdraw() +
+  cowplot::draw_plot(
+    plot = map, x = 0, y = 0,
+    width = 1, height = 1
+  ) +
+  cowplot::draw_plot(
+    plot = legend, x = 0.75, y = 0.02,
+    width = .25, height = .25
+  )
+
+# display the final map with legend
+print(full_map)
+
+# save as PNG file
+ggsave(
+  filename = "bw_bivariate_2d.png",
+  width = 7, height = 7, dpi = 600,
+  device = "png", bg = "white", full_map
+)
+
