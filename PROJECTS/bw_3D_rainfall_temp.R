@@ -189,4 +189,48 @@ ggsave(
   width = 7, height = 7, dpi = 600,
   device = "png", bg = "white", full_map
 )
+# 7. CREATE TERRAIN LAYER
+#------------------------
 
+# project and convert to DEM to dataframe
+dem_df <- dem |>
+  terra::project(target_crs) |>
+  as.data.frame(xy = TRUE, na.rm = TRUE)
+
+# rename the third column to "dem"
+names(dem_df)[3] <- "dem"
+
+# create the terrain layer map
+dem_map <- ggplot(
+  dem_df, aes(x = x, y = y, fill = dem)
+) +
+  geom_raster() +
+  scale_fill_gradientn(colors = "white") +
+  guides(fill = "none") +
+  labs(
+    title = "Botswana: Temperature and Precipitation",
+    subtitle = "Average temperature and precipitation (1981-2010)",
+    caption = "Source: CHELSA | Author: Boineelo Moyo"
+  ) +
+  coord_sf(crs = target_crs) +
+  theme_for_the_win() +
+  theme(legend.position = "none")
+
+# 8. RENDER 3D SCENE
+#-------------------
+
+rayshader::plot_gg(
+  ggobj = full_map,
+  ggobj_height = dem_map,
+  width = 7,
+  height = 7,
+  windowsize = c(600, 600),
+  scale = 100,
+  shadow = TRUE,
+  shadow_intensity = 1,
+  phi = 87, theta = 0, zoom = .56,
+  multicore = TRUE
+)
+
+# zoom out
+rayshader::render_camera(zoom = .6)
